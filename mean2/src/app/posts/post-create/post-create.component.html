@@ -1,0 +1,51 @@
+<!-- <textarea name="" id="" cols="30" rows="10" [value]='newPost' #postInput></textarea> -->
+<mat-card>
+    <form action="" (submit)="onAddPost(postform)" #postform="ngForm">
+        <mat-form-field>
+            <input 
+            matInput
+            type="text" 
+            ngModel
+            required
+            name='title'
+            #title="ngModel"
+            >
+            <mat-error *ngIf="title.invalid">
+                    Please enter a valid email address
+            </mat-error>
+        </mat-form-field>
+        
+        <mat-form-field>
+            <textarea 
+            matInput 
+            cols="30" 
+            rows="10" 
+            ngModel
+            required
+            name='description'
+            #description="ngModel">
+        </textarea>
+        <mat-error *ngIf="description.invalid">
+                Please enter a valid email address
+        </mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <textarea 
+            matInput 
+            cols="30" 
+            rows="10" 
+            ngModel
+            required
+            name='content'
+            #content="ngModel"
+            >
+        </textarea>
+        <!-- <mat-error *ngIf="postform.addControl('title').invalid"> -->
+            <mat-error *ngIf="content.invalid">
+                Please enter a valid email address
+            </mat-error>
+        </mat-form-field>
+        <!-- <button mat-raised-button color="warn" (click)='onAddPost()'>save posts</button> -->
+        <button mat-raised-button color="warn">save posts</button>
+    </form>
+</mat-card>

@@ -1,0 +1,7 @@
+
+<!-- <app-main-nav></app-main-nav> -->
+<app-create-header> my App bar</app-create-header>
+<main>
+  <app-post-create (postCreated)='onPostsAdd($event)'></app-post-create> 
+  <app-post-list [posts]='storedpost'></app-post-list>
+</main>
